@@ -3,8 +3,8 @@
 Sometimes people give you rubbish data, when they do rather than wiring
 everything up with hundreds of methods you could use RandomAttributes.
 
-If you are looking for an attribute library you probably looking for something 
-along the lines of [virtus](https://github.com/solnic/virtus).
+If mangling crappy data is not your issue you are probably better served by
+something like [virtus](https://github.com/solnic/virtus).
 
 ## Installation
 
@@ -26,6 +26,7 @@ Vanilla:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute "fooBar"
 end
 
@@ -37,6 +38,7 @@ Alias:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute "fooBar", alias: :moo_bar
 end
 
@@ -48,6 +50,7 @@ Type casting:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute "fooBar", type: String
 end
 
@@ -59,6 +62,7 @@ Many possible values:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute ["fooBar", "mooBar"], alias: :foo_bar
 end
 
@@ -73,6 +77,7 @@ Trying another node:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute "parentNode"
   attribute "fooBar", try: :parent_node
 end
@@ -88,6 +93,7 @@ Nested within a node:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute "parentNode"
   attribute "fooBar", within: :parent_node
 end
@@ -107,6 +113,7 @@ class Bar
 end
 
 class Foo
+  include RandomAttributes
   attribute "fooBar", model: Bar
 end
 
@@ -125,6 +132,7 @@ class Bar
 end
 
 class Foo
+  include RandomAttributes
   attribute "fooBar", collection: Bar
 end
 
@@ -137,6 +145,7 @@ Parse data with proc:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute "fooBar", parse: ->(value) { "#{value} from a proc!" }
 end
 
@@ -148,6 +157,7 @@ Callbacks:
 
 ```ruby
 class Foo
+  include RandomAttributes
   attribute "fooBar"
   attribute "multipleFooBar"
 

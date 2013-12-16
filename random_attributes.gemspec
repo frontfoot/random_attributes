@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rufuspost@gmail.com"]
   spec.description   = %q{When someone gives you rubbish data an you want to map it to something else.}
   spec.summary       = %q{Data hash to object mapper}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/frontfoot/random_attributes"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "active_support", ">= 3.0"
+  spec.add_runtime_dependency "activesupport", [">= 3.0", ">= 4.0"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"

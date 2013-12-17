@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rufuspost@gmail.com"]
   spec.description   = %q{When someone gives you rubbish data an you want to map it to something else.}
   spec.summary       = %q{Data hash to object mapper}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/frontfoot/random_attributes"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
